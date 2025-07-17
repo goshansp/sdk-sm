@@ -104,8 +104,6 @@ impl Client {
                         Ok::<i32, Error>(42).into_string()
                     }
                     DebugCommand::ErrorTest {} => {
-                        use bitwarden::Error;
-
                         Err::<i32, Error>(Error::Internal(std::borrow::Cow::Borrowed(
                             "This is an error.",
                         )))
